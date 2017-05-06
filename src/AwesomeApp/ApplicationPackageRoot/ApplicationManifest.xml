@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="AwesomeAppType" ApplicationTypeVersion="1.0.1" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="AwesomeAppType" ApplicationTypeVersion="1.0.2" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="AwesomeApi2_InstanceCount" DefaultValue="2" />
     <Parameter Name="AwesomeApi1_InstanceCount" DefaultValue="2" />
@@ -8,11 +8,11 @@
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AwesomeApi2Pkg" ServiceManifestVersion="1.0.1" />
+    <ServiceManifestRef ServiceManifestName="AwesomeApi2Pkg" ServiceManifestVersion="1.0.2" />
     <ConfigOverrides />
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AwesomeApi1Pkg" ServiceManifestVersion="1.0.1" />
+    <ServiceManifestRef ServiceManifestName="AwesomeApi1Pkg" ServiceManifestVersion="1.0.2" />
     <ConfigOverrides />
   </ServiceManifestImport>
   <DefaultServices>

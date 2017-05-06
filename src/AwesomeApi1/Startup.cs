@@ -18,6 +18,11 @@ namespace AwesomeApi1
                 defaults: new {controller = "Health"});
 
             config.Routes.MapHttpRoute(
+                name: "Probes",
+                routeTemplate: "probes",
+                defaults: new { controller = "Probes" });
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new {id = RouteParameter.Optional});
