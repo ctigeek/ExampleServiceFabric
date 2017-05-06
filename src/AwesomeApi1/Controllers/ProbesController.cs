@@ -15,14 +15,20 @@ namespace AwesomeApi1.Controllers
 
         public async Task<string[]> Get()
         {
-            var responses = new List<string>();
-
+            var tasks = new List<Task<string>>();
             foreach (var ip in Ips)
             {
                 foreach (var port in ports)
                 {
-                    responses.Add(await GetHealthResponse(ip,port));
+                    tasks.Add(GetHealthResponse(ip,port));
                 }
+            }
+            await Task.WhenAll(tasks.ToArray());
+
+            var responses = new List<string>();
+            foreach (var task in tasks)
+            {
+                responses.Add(task.Result);
             }
             return responses.ToArray();
         }
